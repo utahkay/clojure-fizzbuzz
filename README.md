@@ -7,16 +7,17 @@ You are familar with counting/dividing game [Fizz Buzz](http://en.wikipedia.org/
 
 You have Clojure (Leiningen) [installed](https://github.com/technomancy/leiningen/blob/stable/README.md)
 
-Create new project
+Create a new project
 
 ```bash
 %> lein new fizzbuzz
+%> cd fizzbuzz
 ```
 
-Add our test runner by adding the following to ``project.clj``
+To run tests add plugin ``lein-test-refresh`` by adding ``:plugins`` to ``project.clj``:
 
 ```clojure
-(defproject banking "0.1.0-SNAPSHOT"
+(defproject fizzbuzz "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -30,4 +31,22 @@ Now we run our tests
 ```bash
 %> lein test-refresh
 ```
+
+Your First Test
+---------------
+
+Replace the first dummy test with
+
+```clojure
+(deftest one-should-be-one
+  (is (= "1" (fizz-buzz 1))))
+```
+
+Make it pass by replacing the dummy code with the following in ``src/fizzbuz/core.clj``
+
+```clojure
+(defn fizz-buzz [x]
+  (str 1))
+```
+
 
