@@ -1,14 +1,33 @@
-# fizzbuzz
+Fizz Buzz Kata in Clojure
+=====================
 
-A Clojure library designed to ... well, that part is up to you.
+Up and Running
+------------
+You are familar with counting/dividing game [Fizz Buzz](http://en.wikipedia.org/wiki/Fizz_buzz).
 
-## Usage
+You have Clojure (Leiningen) [installed](https://github.com/technomancy/leiningen/blob/stable/README.md)
 
-FIXME
+Create new project
 
-## License
+```bash
+%> lein new fizzbuzz
+```
 
-Copyright © 2014 FIXME
+Add our test runner by adding the following to ``project.clj``
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+```clojure
+(defproject banking "0.1.0-SNAPSHOT"
+  :description "FIXME: write description"
+  :url "http://example.com/FIXME"
+  :license {:name "Eclipse Public License"
+            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :dependencies [[org.clojure/clojure "1.5.1"]]
+  :plugins [[com.jakemccrary/lein-test-refresh "0.1.2"]])
+```
+
+Now we run our tests
+
+```bash
+%> lein test-refresh
+```
+
