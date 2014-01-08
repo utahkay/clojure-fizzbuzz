@@ -35,7 +35,7 @@ Now we run our tests
 Your First Test
 ---------------
 
-Replace the first dummy test with
+Replace the first dummy test with the following in ``test/fizzbuzz/core_test.clj``
 
 ```clojure
 (deftest one-should-be-one
@@ -48,5 +48,25 @@ Make it pass by replacing the dummy code with the following in ``src/fizzbuz/cor
 (defn fizz-buzz [x]
   (str 1))
 ```
+
+Second Test
+-----------
+
+We could refactor out the subtle duplication between the test and code. Naw, I'll just triangulate.
+
+```clojure
+(deftest two-should-be-two
+  (is (= "2" (fizz-buzz 2))))
+```
+
+And to make it pass one small change
+
+(defn fizz-buzz [x]
+  (str x))
+
+```clojure
+```
+
+
 
 
