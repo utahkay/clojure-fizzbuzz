@@ -83,6 +83,17 @@ Passing
     :else (str x)))
 ```
 
+Divisible by Five is 'Buzz'
+
+We are skipping testing for 4 because it doesn't add anything.
+
+
+```clojure
+(deftest three-should-fizz
+  (is (= "Buzz" (fizz-buzz 5))))
+```
+
+
 
 
 
