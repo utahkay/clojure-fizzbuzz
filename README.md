@@ -84,6 +84,7 @@ Passing
 ```
 
 Divisible by Five is 'Buzz'
+--------------------------
 
 We are skipping testing for 4 because it doesn't add anything.
 
@@ -93,7 +94,62 @@ We are skipping testing for 4 because it doesn't add anything.
   (is (= "Buzz" (fizz-buzz 5))))
 ```
 
+And passing
 
+```clojure
+(defn fizz-buzz [x]
+  (cond
+    (zero? (mod x 3)) "Fizz"
+    (zero? (mod x 5)) "Buzz"
+    :else (str x)))
+```
+
+Test for 6
+----------
+
+```clojure
+(deftest five-should-buzz
+  (is (= "Buzz" (fizz-buzz 6))))
+```
+
+Which we expect to pass.
+
+What? It passed?
+
+Test for 15
+-----------
+
+```clojure
+(deftest fifteen-should-fizz-buzz
+  (is (= "FizzBuzz" (fizz-buzz 15))))
+```
+
+Passing
+
+```clojure
+(defn fizz-buzz [x]
+  (cond
+    (zero? (mod x 15)) "FizzBuzz"
+    (zero? (mod x 3)) "Fizz"
+    (zero? (mod x 5)) "Buzz"
+    :else (str x)))
+```
+
+Count to 100
+------------
+
+```clojure
+(deftest sequence-fizz-buzz
+  (is (= '("1" "2" "Fizz" "4" "Buzz") (fizz-buzz-seq 1 5))))
+```
+
+Passing
+
+
+```clojure
+(defn fizz-buzz-seq [from to]
+  (map fizz-buzz (range from (inc to))))
+```
 
 
 
