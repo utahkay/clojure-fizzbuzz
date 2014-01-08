@@ -61,10 +61,26 @@ We could refactor out the subtle duplication between the test and code. Naw, I'l
 
 And to make it pass one small change
 
+```clojure
 (defn fizz-buzz [x]
   (str x))
+```
+
+Test 3
+------
 
 ```clojure
+(deftest three-should-fizz
+  (is (= "Fizz" (fizz-buzz 3))))
+```
+
+Passing
+
+```clojure
+(defn fizz-buzz [x]
+  (cond
+    (zero? (mod x 3)) "Fizz"
+    :else (str x)))
 ```
 
 
