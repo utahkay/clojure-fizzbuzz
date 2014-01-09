@@ -78,9 +78,9 @@ Passing
 
 ```clojure
 (defn fizz-buzz [x]
-  (cond
-    (zero? (mod x 3)) "Fizz"
-    :else (str x)))
+  (if (zero? (mod x 3)) 
+    "Fizz"
+    (str x)))
 ```
 
 Divisible by Five is 'Buzz'
@@ -90,7 +90,7 @@ We are skipping testing for 4 because it doesn't add anything.
 
 
 ```clojure
-(deftest three-should-fizz
+(deftest five-should-buzz
   (is (= "Buzz" (fizz-buzz 5))))
 ```
 
@@ -98,18 +98,19 @@ And passing
 
 ```clojure
 (defn fizz-buzz [x]
-  (cond
-    (zero? (mod x 3)) "Fizz"
-    (zero? (mod x 5)) "Buzz"
-    :else (str x)))
+  (if (zero? (mod x 3)) 
+    "Fizz"
+    (if (zero? (mod x 5))
+      "Buzz"
+      (str x))))
 ```
 
 Test for 6
 ----------
 
 ```clojure
-(deftest five-should-buzz
-  (is (= "Buzz" (fizz-buzz 6))))
+(deftest six-should-fizz
+  (is (= "Fizz" (fizz-buzz 6))))
 ```
 
 Which we expect to pass.
@@ -152,5 +153,7 @@ Passing
 ```
 
 Finished! It is time for a cookie!
+
+You may want to move on to the [banking](https://github.com/utahkay/clojure-banking) exercise.
 
 
