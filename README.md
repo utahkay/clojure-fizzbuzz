@@ -5,7 +5,7 @@ Up and Running
 ------------
 You are familar with counting/dividing game [Fizz Buzz](http://en.wikipedia.org/wiki/Fizz_buzz).
 
-You have Clojure (Leiningen) [installed](https://github.com/technomancy/leiningen/blob/stable/README.md)
+You have Leiningen [installed](https://github.com/technomancy/leiningen/blob/stable/README.md)
 
 Create a new project
 
