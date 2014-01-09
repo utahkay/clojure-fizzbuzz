@@ -32,6 +32,12 @@ Now we run our tests
 %> lein test-refresh
 ```
 
+You should see the dummy test fail.
+
+Editor: You may like [LightTable](http://www.lighttable.com/) but you can use any editor for this exercise.
+  
+Clojure [cheat sheet](http://clojure.org/cheatsheet) 
+
 Your First Test
 ---------------
 
